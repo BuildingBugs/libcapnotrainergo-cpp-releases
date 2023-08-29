@@ -100,7 +100,7 @@ int main(int argc, char* argv[]) {
     std::cout << "CapnoTrainer: " << CapnoTrainer::GetVersion() << std::endl;
 
     try {
-        CapnoTrainer capno(port1, port2, user_data_callback);
+        CapnoTrainer capno(port1, port2, user_data_callback, true);
         // Initilize is blocking. 
         // its better to call it on a new thread. 
         // QThread works as well. 

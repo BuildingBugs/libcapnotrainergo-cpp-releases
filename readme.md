@@ -8,7 +8,7 @@ To run the example with Visual Studio:
 
 1) add it to a new or existing project. 
 2) add additional include directories for *capnotrainer/include* and *asio/asio/include*
-3) add additional libraries directories for *capnotrainer/build/Release/Win32/libcapnotrainergo/
+3) add additional libraries directories for *capnotrainer/build/Release/x64/libcapnotrainergo/
 4) add additional dependencies as *libcapnotrainergo.lib*
 5) build the project
 

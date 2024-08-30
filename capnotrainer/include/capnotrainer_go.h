@@ -12,6 +12,10 @@ public:
     uint8_t connection_handle = DONGLE_INVALID_CONN_HANDLE;
 
     std::vector<float> co2_array;
+    std::vector<float> battery_array;
+    std::vector<float> etco2_array;
+    std::vector<float> inspco2_array;
+    std::vector<float> bpm_array;
     double last_time;
 
     bool _has_received_pressure = false;
@@ -22,6 +26,7 @@ public:
 
 
     std::vector<uint8_t> current_buffer;
+    std::vector<uint8_t> last_buffer;
     std::vector<uint8_t> last_buffer_remains;
 
     void handle_incoming_data(std::vector<uint8_t>& data, double current_time);
@@ -44,6 +49,9 @@ public:
 
     std::vector<uint8_t> handle_get_gas_temperature_req();
     void handle_get_gas_temperature_res(std::vector<uint8_t>& buffer);
+
+    std::vector<uint8_t> handle_set_etco2_time_period_req();
+    void handle_set_etco2_time_period_res(std::vector<uint8_t>& buffer);
 
     std::vector<uint8_t> handle_get_battery_status_req();
     void handle_get_battery_status_res(std::vector<uint8_t>& buffer);
